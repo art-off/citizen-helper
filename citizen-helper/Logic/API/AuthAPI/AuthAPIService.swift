@@ -13,16 +13,35 @@ class AuthAPIService {
     
     // Result будет содержать в себе токен или ошибку
     func registration(user: User, with password: String, completion: @escaping (Result<String, AppError>) -> Void) {
-        baseAPIService.load(TokenResponse.self,
-             request: AuthAPI.registration(for: user, withPassword: password),
-             completion: { result in
+        baseAPIService.load(
+            TokenResponse.self,
+            request: AuthAPI.registration(for: user, withPassword: password),
+            completion: { result in
                 switch result {
                 case .success(let tokenResponse):
                     completion(.success(tokenResponse.token))
                 case .failure(let error):
                     completion(.failure(error))
                 }
-             })
+            }
+        )
+    }
+    
+    func auth(user: User, with password: String, completion: @escaping (Result<String, AppError>) -> Void) {
+        baseAPIService.load(
+            TokenResponse.self,
+            request: AuthAPI.auth(user: user, withPassword: password),
+            completion: { result in
+                switch result {
+                case .success(let tokenResponse):
+                    completion(.success(tokenResponse.token))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }, errorCodes: [
+                401: .unauthorized
+            ]
+        )
     }
     
 }

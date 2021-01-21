@@ -26,7 +26,14 @@ struct AuthAPI {
         
         let jsonData = try! JSONSerialization.data(withJSONObject: json)
         
-        let request = baseApi.postRequest(with: url, andJsonData: jsonData)
+        let request = baseApi.request(.post, with: url, andJsonData: jsonData)
+        return request
+    }
+    
+    static func auth(user: User, withPassword password: String) -> URLRequest {
+        let url = URL(string: "\(baseApi.address)/api/v1/user/")!
+        
+        let request = baseApi.requestWithBacisAuth(.get, email: user.email, password: password, with: url)
         return request
     }
     

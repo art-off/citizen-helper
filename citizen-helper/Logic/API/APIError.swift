@@ -16,6 +16,8 @@ enum APIError: Error {
     case invalidEmail
     case invalidFullName
     
+    case unauthorized
+    
     
     init?(raw: String) {
         switch raw {
@@ -24,6 +26,7 @@ enum APIError: Error {
         case "password_entirely_numeric": self = .passwordEntirelyNumeric
         case "invalid_email": self = .invalidEmail
         case "invalid_full_name": self = .invalidFullName
+        case "unauthorized": self = .unauthorized
         default: return nil
         }
     }
