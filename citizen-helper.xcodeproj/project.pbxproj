@@ -28,6 +28,7 @@
 		4A38D14125B9A39F006EE06F /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D14025B9A39F006EE06F /* TokenResponse.swift */; };
 		4A38D14525B9A583006EE06F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D14425B9A583006EE06F /* APIError.swift */; };
 		4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D15525B9FBE4006EE06F /* AuthService.swift */; };
+		4A38D15B25BA0246006EE06F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D15A25BA0246006EE06F /* AppRouter.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		4A38D14025B9A39F006EE06F /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		4A38D14425B9A583006EE06F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4A38D15525B9FBE4006EE06F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4A38D15A25BA0246006EE06F /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,9 +97,11 @@
 			children = (
 				4A38D0EA25B8917E006EE06F /* AppDelegate.swift */,
 				4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */,
+				4A38D15A25BA0246006EE06F /* AppRouter.swift */,
 				4A38D0EE25B8917E006EE06F /* ViewController.swift */,
 				4A38D10425B974D5006EE06F /* Logic */,
 				4A38D0FF25B96F5A006EE06F /* Model */,
+				4A38D15E25BA03AB006EE06F /* Modules */,
 				4A38D0F025B8917E006EE06F /* Main.storyboard */,
 				4A38D0F325B89182006EE06F /* Assets.xcassets */,
 				4A38D0F525B89182006EE06F /* LaunchScreen.storyboard */,
@@ -213,6 +217,13 @@
 				4A38D15525B9FBE4006EE06F /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4A38D15E25BA03AB006EE06F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -348,6 +359,7 @@
 			files = (
 				4A38D10125B96FA3006EE06F /* User.swift in Sources */,
 				4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */,
+				4A38D15B25BA0246006EE06F /* AppRouter.swift in Sources */,
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
 				4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */,
 				4A38D14525B9A583006EE06F /* APIError.swift in Sources */,
