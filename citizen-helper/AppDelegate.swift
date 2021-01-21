@@ -18,15 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Инициализируем БД
         _ = DataManager.shared
         
-//        AuthAPIService().auth(user: User(fio: "FF II OO", email: "eemm@eemm.com", address: nil), with: "qwerasdf") { a in
-//            print(a)
-//            User.token = try? a.get()
-//        }
-        
-        AuthAPIService().changePassword(fromOld: "qwerasdf", toNew: "qwerasdf") { a in
-            print(a)
-        }
-        
         return true
     }
 

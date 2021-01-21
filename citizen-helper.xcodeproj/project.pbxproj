@@ -27,6 +27,7 @@
 		4A38D13C25B9A348006EE06F /* ErrorCodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D13B25B9A348006EE06F /* ErrorCodesResponse.swift */; };
 		4A38D14125B9A39F006EE06F /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D14025B9A39F006EE06F /* TokenResponse.swift */; };
 		4A38D14525B9A583006EE06F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D14425B9A583006EE06F /* APIError.swift */; };
+		4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D15525B9FBE4006EE06F /* AuthService.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		4A38D13B25B9A348006EE06F /* ErrorCodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodesResponse.swift; sourceTree = "<group>"; };
 		4A38D14025B9A39F006EE06F /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		4A38D14425B9A583006EE06F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		4A38D15525B9FBE4006EE06F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				4A38D13225B99471006EE06F /* AppError.swift */,
+				4A38D15425B9FBD0006EE06F /* Services */,
 				4A38D12525B98D21006EE06F /* API */,
 				4A38D11125B97A20006EE06F /* DataManager */,
 				4A38D10525B974DD006EE06F /* UserDefaults */,
@@ -202,6 +205,14 @@
 				4A38D14025B9A39F006EE06F /* TokenResponse.swift */,
 			);
 			path = ResponseObjects;
+			sourceTree = "<group>";
+		};
+		4A38D15425B9FBD0006EE06F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D15525B9FBE4006EE06F /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -338,6 +349,7 @@
 				4A38D10125B96FA3006EE06F /* User.swift in Sources */,
 				4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */,
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
+				4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */,
 				4A38D14525B9A583006EE06F /* APIError.swift in Sources */,
 				4A38D13625B9A079006EE06F /* BaseAPIService.swift in Sources */,
 				4A38D13C25B9A348006EE06F /* ErrorCodesResponse.swift in Sources */,
