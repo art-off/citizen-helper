@@ -19,6 +19,14 @@
 		4A38D11825B97CA4006EE06F /* RUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D11725B97CA4006EE06F /* RUser.swift */; };
 		4A38D11C25B97EE5006EE06F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D11B25B97EE5006EE06F /* Repository.swift */; };
 		4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D11F25B9818F006EE06F /* Realm+CascadeDeleting.swift */; };
+		4A38D12825B98D5B006EE06F /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D12725B98D5B006EE06F /* AuthAPI.swift */; };
+		4A38D12C25B98DB0006EE06F /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D12B25B98DB0006EE06F /* BaseAPI.swift */; };
+		4A38D13025B99421006EE06F /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D12F25B99421006EE06F /* AuthAPIService.swift */; };
+		4A38D13325B99471006EE06F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D13225B99471006EE06F /* AppError.swift */; };
+		4A38D13625B9A079006EE06F /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D13525B9A079006EE06F /* BaseAPIService.swift */; };
+		4A38D13C25B9A348006EE06F /* ErrorCodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D13B25B9A348006EE06F /* ErrorCodesResponse.swift */; };
+		4A38D14125B9A39F006EE06F /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D14025B9A39F006EE06F /* TokenResponse.swift */; };
+		4A38D14525B9A583006EE06F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D14425B9A583006EE06F /* APIError.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +47,14 @@
 		4A38D11725B97CA4006EE06F /* RUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUser.swift; sourceTree = "<group>"; };
 		4A38D11B25B97EE5006EE06F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		4A38D11F25B9818F006EE06F /* Realm+CascadeDeleting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+CascadeDeleting.swift"; sourceTree = "<group>"; };
+		4A38D12725B98D5B006EE06F /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		4A38D12B25B98DB0006EE06F /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		4A38D12F25B99421006EE06F /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
+		4A38D13225B99471006EE06F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		4A38D13525B9A079006EE06F /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
+		4A38D13B25B9A348006EE06F /* ErrorCodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodesResponse.swift; sourceTree = "<group>"; };
+		4A38D14025B9A39F006EE06F /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		4A38D14425B9A583006EE06F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,6 +115,8 @@
 		4A38D10425B974D5006EE06F /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				4A38D13225B99471006EE06F /* AppError.swift */,
+				4A38D12525B98D21006EE06F /* API */,
 				4A38D11125B97A20006EE06F /* DataManager */,
 				4A38D10525B974DD006EE06F /* UserDefaults */,
 			);
@@ -146,6 +164,44 @@
 				4A38D11F25B9818F006EE06F /* Realm+CascadeDeleting.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4A38D12525B98D21006EE06F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D14425B9A583006EE06F /* APIError.swift */,
+				4A38D13A25B9A32B006EE06F /* CommonResponseObjects */,
+				4A38D12B25B98DB0006EE06F /* BaseAPI.swift */,
+				4A38D13525B9A079006EE06F /* BaseAPIService.swift */,
+				4A38D12625B98D4A006EE06F /* AuthAPI */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4A38D12625B98D4A006EE06F /* AuthAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D13F25B9A38F006EE06F /* ResponseObjects */,
+				4A38D12725B98D5B006EE06F /* AuthAPI.swift */,
+				4A38D12F25B99421006EE06F /* AuthAPIService.swift */,
+			);
+			path = AuthAPI;
+			sourceTree = "<group>";
+		};
+		4A38D13A25B9A32B006EE06F /* CommonResponseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D13B25B9A348006EE06F /* ErrorCodesResponse.swift */,
+			);
+			path = CommonResponseObjects;
+			sourceTree = "<group>";
+		};
+		4A38D13F25B9A38F006EE06F /* ResponseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D14025B9A39F006EE06F /* TokenResponse.swift */,
+			);
+			path = ResponseObjects;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -282,11 +338,19 @@
 				4A38D10125B96FA3006EE06F /* User.swift in Sources */,
 				4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */,
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
+				4A38D14525B9A583006EE06F /* APIError.swift in Sources */,
+				4A38D13625B9A079006EE06F /* BaseAPIService.swift in Sources */,
+				4A38D13C25B9A348006EE06F /* ErrorCodesResponse.swift in Sources */,
 				4A38D10725B9750C006EE06F /* UserDefaultsWrapper.swift in Sources */,
+				4A38D13325B99471006EE06F /* AppError.swift in Sources */,
 				4A38D11C25B97EE5006EE06F /* Repository.swift in Sources */,
 				4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */,
+				4A38D12C25B98DB0006EE06F /* BaseAPI.swift in Sources */,
+				4A38D12825B98D5B006EE06F /* AuthAPI.swift in Sources */,
+				4A38D13025B99421006EE06F /* AuthAPIService.swift in Sources */,
 				4A38D11825B97CA4006EE06F /* RUser.swift in Sources */,
 				4A38D0EB25B8917E006EE06F /* AppDelegate.swift in Sources */,
+				4A38D14125B9A39F006EE06F /* TokenResponse.swift in Sources */,
 				4A38D0ED25B8917E006EE06F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
