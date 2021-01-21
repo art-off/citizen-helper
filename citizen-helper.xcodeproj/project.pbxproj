@@ -16,6 +16,9 @@
 		4A38D10125B96FA3006EE06F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D10025B96FA3006EE06F /* User.swift */; };
 		4A38D10725B9750C006EE06F /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D10625B9750C006EE06F /* UserDefaultsWrapper.swift */; };
 		4A38D11325B97A62006EE06F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D11225B97A62006EE06F /* DataManager.swift */; };
+		4A38D11825B97CA4006EE06F /* RUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D11725B97CA4006EE06F /* RUser.swift */; };
+		4A38D11C25B97EE5006EE06F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D11B25B97EE5006EE06F /* Repository.swift */; };
+		4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D11F25B9818F006EE06F /* Realm+CascadeDeleting.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		4A38D10025B96FA3006EE06F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4A38D10625B9750C006EE06F /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		4A38D11225B97A62006EE06F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4A38D11725B97CA4006EE06F /* RUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUser.swift; sourceTree = "<group>"; };
+		4A38D11B25B97EE5006EE06F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		4A38D11F25B9818F006EE06F /* Realm+CascadeDeleting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+CascadeDeleting.swift"; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,9 +116,36 @@
 		4A38D11125B97A20006EE06F /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				4A38D11A25B97D97006EE06F /* Repository */,
+				4A38D11625B97C92006EE06F /* Models */,
 				4A38D11225B97A62006EE06F /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		4A38D11625B97C92006EE06F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D11725B97CA4006EE06F /* RUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A38D11A25B97D97006EE06F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D11E25B98172006EE06F /* Extensions */,
+				4A38D11B25B97EE5006EE06F /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4A38D11E25B98172006EE06F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D11F25B9818F006EE06F /* Realm+CascadeDeleting.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -247,9 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A38D10125B96FA3006EE06F /* User.swift in Sources */,
+				4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */,
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
 				4A38D10725B9750C006EE06F /* UserDefaultsWrapper.swift in Sources */,
+				4A38D11C25B97EE5006EE06F /* Repository.swift in Sources */,
 				4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */,
+				4A38D11825B97CA4006EE06F /* RUser.swift in Sources */,
 				4A38D0EB25B8917E006EE06F /* AppDelegate.swift in Sources */,
 				4A38D0ED25B8917E006EE06F /* SceneDelegate.swift in Sources */,
 			);

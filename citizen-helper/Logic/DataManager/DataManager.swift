@@ -15,6 +15,8 @@ class DataManager {
     
     private let realm: Realm
     
+    private let userRepository: Repository<RUser>
+    
     private init() {
         let fileManager = FileManager.default
         
@@ -39,6 +41,26 @@ class DataManager {
         print(realmUrl)
         
         realm = try! Realm(configuration: realmConfig)
+        
+        userRepository = Repository<RUser>(realm: realm)
+    }
+    
+}
+
+// MARK: - RUser
+// Экземпляр этого класса только один
+// и вся логика из этого соотвествующая:
+// - когда записываем нового юзера - удаляем остальных
+// - для получения есть только один метод, который возвращает одного юзаре
+extension DataManager {
+    
+    func getCurrentUser() -> User? {
+        return userRepository.getAll().first?.toDomain()
+    }
+    
+    func replaceCurrUser(to user: User) {
+        try? userRepository.delete(items: userRepository.getAll())
+        try? userRepository.insert(item: user.toRealm())
     }
     
 }

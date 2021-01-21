@@ -17,3 +17,15 @@ struct User {
     static var token: String?
     
 }
+
+extension User {
+    
+    func toRealm() -> RUser {
+        let rUser = RUser()
+        rUser.fio = fio
+        rUser.email = email
+        rUser.address = address
+        return rUser
+    }
+    
+}
