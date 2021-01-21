@@ -18,15 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Инициализируем БД
         _ = DataManager.shared
         
-        print(DataManager.shared.getCurrentUser())
-//        DataManager.shared.replaceCurrUser(to: User(fio: "2222", email: "em 2", address: nil))
-        print(DataManager.shared.getCurrentUser())
-        
-        
-//        let user = User(fio: "f i o 1", email: "em 1", address: "ad 1")
-//        DataManager.shared.replaceCurrUser(to: user)
-        
-        
         return true
     }
 

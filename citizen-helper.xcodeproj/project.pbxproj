@@ -117,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				4A38D11A25B97D97006EE06F /* Repository */,
-				4A38D11625B97C92006EE06F /* Models */,
 				4A38D11225B97A62006EE06F /* DataManager.swift */,
+				4A38D11625B97C92006EE06F /* Models */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
