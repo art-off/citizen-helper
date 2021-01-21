@@ -13,6 +13,7 @@ enum AppError: Error {
     case connectionError
     case authErrors([APIError])
     
+    case invalidToken
     
     case unowned
     

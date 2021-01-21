@@ -11,7 +11,7 @@ struct BaseAPI {
     
     static let address = "http://msu.w0rng.ru"
     
-    // MARK: - Helper Methods
+    // MARK: - Helper Methods (Request)
     static func request(_ method: HTTPMethod, with url: URL, andJsonData jsonData: Data? = nil) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
@@ -33,6 +33,17 @@ struct BaseAPI {
         let base64AuthString = authData.base64EncodedString()
         request.setValue("Basic \(base64AuthString)", forHTTPHeaderField: "Authorization")
         
+        return request
+    }
+    
+    static func requestWithBearerToken(_ method: HTTPMethod,
+                                       token: String,
+                                       with url: URL,
+                                       andJsonData jsonData: Data? = nil) -> URLRequest {
+        
+        var request = Self.request(method, with: url, andJsonData: jsonData)
+        
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         return request
     }
     

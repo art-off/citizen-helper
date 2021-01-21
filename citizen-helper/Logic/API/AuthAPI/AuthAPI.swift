@@ -37,4 +37,17 @@ struct AuthAPI {
         return request
     }
     
+    static func changePassword(fromOld oldPassword: String, toNew newPassword: String, token: String) -> URLRequest {
+        let url = URL(string: "\(baseApi.address)/api/v1/user/")!
+        
+        let json: [String: String] = [
+            "old_password": oldPassword,
+            "new_password": newPassword,
+        ]
+        let jsonData = try! JSONSerialization.data(withJSONObject: json)
+        
+        let request = baseApi.requestWithBearerToken(.put, token: token, with: url, andJsonData: jsonData)
+        return request
+    }
+    
 }

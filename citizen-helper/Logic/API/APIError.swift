@@ -16,6 +16,8 @@ enum APIError: Error {
     case invalidEmail
     case invalidFullName
     
+    case invalidPassword
+    
     case unauthorized
     
     
@@ -27,6 +29,7 @@ enum APIError: Error {
         case "invalid_email": self = .invalidEmail
         case "invalid_full_name": self = .invalidFullName
         case "unauthorized": self = .unauthorized
+        case "invalid_password": self = .invalidPassword
         default: return nil
         }
     }
