@@ -8,11 +8,11 @@
 import UIKit
 import SnapKit
 
-protocol AuthViewControllerProtocol: AnyObject {
+protocol AuthViewControllerProtocol: BaseViewControllerProtocol {
     var presenter: AuthPresenterProtocol? { get set }
 }
 
-class AuthViewController: UIViewController {
+class AuthViewController: BaseViewController {
     
     var presenter: AuthPresenterProtocol?
     

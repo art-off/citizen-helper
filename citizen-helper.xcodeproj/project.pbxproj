@@ -33,6 +33,8 @@
 		4A38D16725BA1386006EE06F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D16625BA1386006EE06F /* AuthViewController.swift */; };
 		4A38D16B25BA1405006EE06F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D16A25BA1405006EE06F /* AuthPresenter.swift */; };
 		4A76462925BB3BE80075541B /* AuthUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76462825BB3BE80075541B /* AuthUIHelper.swift */; };
+		4A76462E25BB5A6F0075541B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76462D25BB5A6F0075541B /* BaseViewController.swift */; };
+		4A76463125BB5B440075541B /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463025BB5B440075541B /* AlertView.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		4A38D16625BA1386006EE06F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		4A38D16A25BA1405006EE06F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		4A76462825BB3BE80075541B /* AuthUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUIHelper.swift; sourceTree = "<group>"; };
+		4A76462D25BB5A6F0075541B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4A76463025BB5B440075541B /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,7 @@
 				4A38D0EE25B8917E006EE06F /* ViewController.swift */,
 				4A38D10425B974D5006EE06F /* Logic */,
 				4A38D0FF25B96F5A006EE06F /* Model */,
+				4A76462C25BB5A520075541B /* Common */,
 				4A38D15E25BA03AB006EE06F /* Modules */,
 				4A38D0F025B8917E006EE06F /* Main.storyboard */,
 				4A38D0F325B89182006EE06F /* Assets.xcassets */,
@@ -254,6 +259,15 @@
 			path = AuthScreen;
 			sourceTree = "<group>";
 		};
+		4A76462C25BB5A520075541B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4A76462D25BB5A6F0075541B /* BaseViewController.swift */,
+				4A76463025BB5B440075541B /* AlertView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +404,8 @@
 				4A38D16325BA0FD2006EE06F /* AuthRouter.swift in Sources */,
 				4A38D15B25BA0246006EE06F /* AppRouter.swift in Sources */,
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
+				4A76463125BB5B440075541B /* AlertView.swift in Sources */,
+				4A76462E25BB5A6F0075541B /* BaseViewController.swift in Sources */,
 				4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */,
 				4A38D14525B9A583006EE06F /* APIError.swift in Sources */,
 				4A38D13625B9A079006EE06F /* BaseAPIService.swift in Sources */,
