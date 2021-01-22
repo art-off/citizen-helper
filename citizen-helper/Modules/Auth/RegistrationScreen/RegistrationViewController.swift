@@ -1,36 +1,33 @@
 //
-//  AuthViewController.swift
+//  RegistrationViewController.swift
 //  citizen-helper
 //
-//  Created by art-off on 22.01.2021.
+//  Created by art-off on 23.01.2021.
 //
 
 import UIKit
-import SnapKit
 
-protocol AuthViewControllerProtocol: BaseViewControllerProtocol {
-    var presenter: AuthPresenterProtocol? { get set }
+protocol RegistrationViewControllerProtocol: BaseViewControllerProtocol {
+    var presenter: RegistrationPresenterProtocol? { get set }
 }
 
-class AuthViewController: BaseViewController {
+class RegistrationViewController: BaseViewController {
     
-    var presenter: AuthPresenterProtocol?
+    var presenter: RegistrationPresenterProtocol?
     
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
     private let titleLabel = AuthUIHelper.titleLabel()
-    private let emblemImageView = AuthUIHelper.emblemImageView()
     
     private let textFieldsStackView = AuthUIHelper.textFieldsStackView()
+    private var surnameTextField: UITextField!
+    private var firstNameTextField: UITextField!
+    private var middleNameTextFiled: UITextField!
+    private var addressTextField: UITextField!
     private var emailTextField: UITextField!
     private var passwordTextFiled: UITextField!
-    
-    private let signInButton: UIButton = {
-        let button = UIButton()
-        return button
-    }()
     
     private let registrationButton: UIButton = {
         let button = UIButton()
@@ -46,9 +43,7 @@ class AuthViewController: BaseViewController {
         setupScrollView()
         
         setupTitleLabel()
-        setupEmblem()
         setupTextFields()
-        setupSignInButton()
         setupRegistrationButton()
         
         
@@ -79,26 +74,40 @@ class AuthViewController: BaseViewController {
         titleLabel.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview().inset(20)
         }
-        titleLabel.text = "Вход"
+        titleLabel.text = "Регистрация"
         titleLabel.textColor = .gray
-    }
-    
-    private func setupEmblem() {
-        contentView.addSubview(emblemImageView)
-        emblemImageView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
-            make.size.equalTo(130)
-        }
     }
     
     private func setupTextFields() {
         contentView.addSubview(textFieldsStackView)
         textFieldsStackView.snp.makeConstraints { make in
-            make.top.equalTo(emblemImageView.snp.bottom).offset(20)
+            make.top.equalTo(titleLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(20)
         }
         textFieldsStackView.backgroundColor = .clear
+        
+        let (sWparView, sTextField) = AuthUIHelper.roundedTextFiled()
+        surnameTextField = sTextField
+        surnameTextField.placeholder = "Фамилия"
+        surnameTextField.keyboardType = .alphabet
+        surnameTextField.autocorrectionType = .no
+        
+        let (fnWparView, fnTextField) = AuthUIHelper.roundedTextFiled()
+        firstNameTextField = fnTextField
+        firstNameTextField.placeholder = "Имя"
+        firstNameTextField.keyboardType = .alphabet
+        firstNameTextField.autocorrectionType = .no
+        
+        let (mnWparView, mnTextField) = AuthUIHelper.roundedTextFiled()
+        middleNameTextFiled = mnTextField
+        middleNameTextFiled.placeholder = "Отчество (не обязательно)"
+        middleNameTextFiled.keyboardType = .alphabet
+        middleNameTextFiled.autocorrectionType = .no
+        
+        let (aWparView, aTextField) = AuthUIHelper.roundedTextFiled()
+        addressTextField = aTextField
+        addressTextField.placeholder = "Адрес проживания (не обязательно)"
+        addressTextField.autocorrectionType = .no
         
         let (eWrapView, eTextField) = AuthUIHelper.roundedTextFiled()
         emailTextField = eTextField
@@ -111,53 +120,53 @@ class AuthViewController: BaseViewController {
         passwordTextFiled.placeholder = "Пароль"
         passwordTextFiled.isSecureTextEntry = true
         
+        sWparView.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
+        fnWparView.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
+        mnWparView.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
+        aWparView.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
         eWrapView.snp.makeConstraints { make in
             make.height.equalTo(40)
         }
         pWrapView.snp.makeConstraints { make in
             make.height.equalTo(40)
         }
+        textFieldsStackView.addArrangedSubview(sWparView)
+        textFieldsStackView.addArrangedSubview(fnWparView)
+        textFieldsStackView.addArrangedSubview(mnWparView)
+        textFieldsStackView.addArrangedSubview(aWparView)
         textFieldsStackView.addArrangedSubview(eWrapView)
         textFieldsStackView.addArrangedSubview(pWrapView)
-    }
-    
-    private func setupSignInButton() {
-        contentView.addSubview(signInButton)
-        signInButton.snp.makeConstraints { make in
-            make.top.equalTo(textFieldsStackView.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(20)
-        }
-        signInButton.setTitle("Войти", for: .normal)
-        signInButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        signInButton.backgroundColor = .systemGray2
-        signInButton.layer.cornerRadius = 10
-        signInButton.snp.makeConstraints { make in
-            make.height.equalTo(40)
-        }
-        signInButton.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
     }
     
     private func setupRegistrationButton() {
         contentView.addSubview(registrationButton)
         registrationButton.snp.makeConstraints { make in
-            make.top.equalTo(signInButton.snp.bottom).offset(2)
+            make.top.equalTo(textFieldsStackView.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(20)
             make.bottom.equalToSuperview()
         }
         registrationButton.setTitle("Регистрация", for: .normal)
-        registrationButton.setTitleColor(.gray, for: .normal)
+        registrationButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        registrationButton.backgroundColor = .systemGray2
+        registrationButton.layer.cornerRadius = 10
+        registrationButton.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
         registrationButton.addTarget(self, action: #selector(didTapRegistrationButton), for: .touchUpInside)
     }
     
     // MARK: - Actions
     @objc
-    private func didTapSignInButton() {
-        presenter?.signIn(email: emailTextField.text ?? "", password: passwordTextFiled.text ?? "")
-    }
-    
-    @objc
     private func didTapRegistrationButton() {
-        presenter?.onSelectRegister()
+//        presenter?.onSelectRegister()
     }
     
     private func addGestureRecongizerToHideKeyboard() {
@@ -198,6 +207,9 @@ class AuthViewController: BaseViewController {
         scrollView.contentInset = contentInset
     }
     
+    
 }
 
-extension AuthViewController: AuthViewControllerProtocol { }
+extension RegistrationViewController: RegistrationViewControllerProtocol {
+    
+}

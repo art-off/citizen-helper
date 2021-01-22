@@ -7,9 +7,9 @@
 
 import Foundation
 
-//protocol AuthPresenterDelegate: AnyObject {
-//
-//}
+protocol AuthPresenterDelegate: AnyObject {
+    func showRegistrationScreen()
+}
 
 protocol AuthPresenterProtocol {
     func signIn(email: String, password: String)
@@ -19,11 +19,13 @@ protocol AuthPresenterProtocol {
 class AuthPresenter {
     
     private weak var controller: AuthViewControllerProtocol?
+    private weak var delegate: AuthPresenterDelegate?
     
     private let authService = AuthService()
     
-    init(controller: AuthViewControllerProtocol) {
+    init(controller: AuthViewControllerProtocol, delegate: AuthPresenterDelegate) {
         self.controller = controller
+        self.delegate = delegate
     }
     
 }
@@ -50,7 +52,7 @@ extension AuthPresenter: AuthPresenterProtocol {
     }
     
     func onSelectRegister() {
-        // TODO: Прописать открытие другого экрана
+        delegate?.showRegistrationScreen()
     }
     
 }

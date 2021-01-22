@@ -35,6 +35,8 @@
 		4A76462925BB3BE80075541B /* AuthUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76462825BB3BE80075541B /* AuthUIHelper.swift */; };
 		4A76462E25BB5A6F0075541B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76462D25BB5A6F0075541B /* BaseViewController.swift */; };
 		4A76463125BB5B440075541B /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463025BB5B440075541B /* AlertView.swift */; };
+		4A76463525BB69E20075541B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463425BB69E20075541B /* RegistrationViewController.swift */; };
+		4A76463925BB69EE0075541B /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463825BB69EE0075541B /* RegistrationPresenter.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		4A76462825BB3BE80075541B /* AuthUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUIHelper.swift; sourceTree = "<group>"; };
 		4A76462D25BB5A6F0075541B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4A76463025BB5B440075541B /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		4A76463425BB69E20075541B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		4A76463825BB69EE0075541B /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -246,6 +250,7 @@
 				4A38D16225BA0FD2006EE06F /* AuthRouter.swift */,
 				4A76462825BB3BE80075541B /* AuthUIHelper.swift */,
 				4A38D16525BA12F5006EE06F /* AuthScreen */,
+				4A76463325BB69C50075541B /* RegistrationScreen */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -266,6 +271,15 @@
 				4A76463025BB5B440075541B /* AlertView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		4A76463325BB69C50075541B /* RegistrationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4A76463425BB69E20075541B /* RegistrationViewController.swift */,
+				4A76463825BB69EE0075541B /* RegistrationPresenter.swift */,
+			);
+			path = RegistrationScreen;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -400,9 +414,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A38D10125B96FA3006EE06F /* User.swift in Sources */,
+				4A76463925BB69EE0075541B /* RegistrationPresenter.swift in Sources */,
 				4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */,
 				4A38D16325BA0FD2006EE06F /* AuthRouter.swift in Sources */,
 				4A38D15B25BA0246006EE06F /* AppRouter.swift in Sources */,
+				4A76463525BB69E20075541B /* RegistrationViewController.swift in Sources */,
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
 				4A76463125BB5B440075541B /* AlertView.swift in Sources */,
 				4A76462E25BB5A6F0075541B /* BaseViewController.swift in Sources */,
