@@ -29,6 +29,10 @@
 		4A38D14525B9A583006EE06F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D14425B9A583006EE06F /* APIError.swift */; };
 		4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D15525B9FBE4006EE06F /* AuthService.swift */; };
 		4A38D15B25BA0246006EE06F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D15A25BA0246006EE06F /* AppRouter.swift */; };
+		4A38D16325BA0FD2006EE06F /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D16225BA0FD2006EE06F /* AuthRouter.swift */; };
+		4A38D16725BA1386006EE06F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D16625BA1386006EE06F /* AuthViewController.swift */; };
+		4A38D16B25BA1405006EE06F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D16A25BA1405006EE06F /* AuthPresenter.swift */; };
+		4A76462925BB3BE80075541B /* AuthUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76462825BB3BE80075541B /* AuthUIHelper.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		4A38D14425B9A583006EE06F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4A38D15525B9FBE4006EE06F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4A38D15A25BA0246006EE06F /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		4A38D16225BA0FD2006EE06F /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		4A38D16625BA1386006EE06F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		4A38D16A25BA1405006EE06F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		4A76462825BB3BE80075541B /* AuthUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUIHelper.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -222,8 +230,28 @@
 		4A38D15E25BA03AB006EE06F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A38D16125BA0FB6006EE06F /* Auth */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		4A38D16125BA0FB6006EE06F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D16225BA0FD2006EE06F /* AuthRouter.swift */,
+				4A76462825BB3BE80075541B /* AuthUIHelper.swift */,
+				4A38D16525BA12F5006EE06F /* AuthScreen */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		4A38D16525BA12F5006EE06F /* AuthScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D16625BA1386006EE06F /* AuthViewController.swift */,
+				4A38D16A25BA1405006EE06F /* AuthPresenter.swift */,
+			);
+			path = AuthScreen;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -359,6 +387,7 @@
 			files = (
 				4A38D10125B96FA3006EE06F /* User.swift in Sources */,
 				4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */,
+				4A38D16325BA0FD2006EE06F /* AuthRouter.swift in Sources */,
 				4A38D15B25BA0246006EE06F /* AppRouter.swift in Sources */,
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
 				4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */,
@@ -366,14 +395,17 @@
 				4A38D13625B9A079006EE06F /* BaseAPIService.swift in Sources */,
 				4A38D13C25B9A348006EE06F /* ErrorCodesResponse.swift in Sources */,
 				4A38D10725B9750C006EE06F /* UserDefaultsWrapper.swift in Sources */,
+				4A38D16725BA1386006EE06F /* AuthViewController.swift in Sources */,
 				4A38D13325B99471006EE06F /* AppError.swift in Sources */,
 				4A38D11C25B97EE5006EE06F /* Repository.swift in Sources */,
 				4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */,
 				4A38D12C25B98DB0006EE06F /* BaseAPI.swift in Sources */,
 				4A38D12825B98D5B006EE06F /* AuthAPI.swift in Sources */,
+				4A38D16B25BA1405006EE06F /* AuthPresenter.swift in Sources */,
 				4A38D13025B99421006EE06F /* AuthAPIService.swift in Sources */,
 				4A38D11825B97CA4006EE06F /* RUser.swift in Sources */,
 				4A38D0EB25B8917E006EE06F /* AppDelegate.swift in Sources */,
+				4A76462925BB3BE80075541B /* AuthUIHelper.swift in Sources */,
 				4A38D14125B9A39F006EE06F /* TokenResponse.swift in Sources */,
 				4A38D0ED25B8917E006EE06F /* SceneDelegate.swift in Sources */,
 			);
