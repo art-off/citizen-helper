@@ -204,7 +204,7 @@ class AuthViewController: BaseViewController {
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
 
         var contentInset = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 20
+        contentInset.bottom = keyboardFrame.size.height + 50
         scrollView.contentInset = contentInset
     }
 
@@ -216,6 +216,4 @@ class AuthViewController: BaseViewController {
     
 }
 
-extension AuthViewController: AuthViewControllerProtocol {
-    
-}
+extension AuthViewController: AuthViewControllerProtocol { }
