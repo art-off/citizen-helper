@@ -34,4 +34,16 @@ enum APIError: Error {
         }
     }
     
+    var description: String {
+        switch self {
+        case .emailAlreadyUse: return "Email уже используется"
+        case .passwordTooShort: return "Пароль слишком короткий"
+        case .passwordEntirelyNumeric: return "Пароль не содержит чисел"
+        case .invalidEmail: return "Некорректный email"
+        case .invalidFullName: return "Некорректные ФИО"
+        case .invalidPassword: return "Некорректный пароль"
+        case .unauthorized: return "Неверный email или пароль"
+        }
+    }
+    
 }

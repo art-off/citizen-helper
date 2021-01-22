@@ -119,10 +119,13 @@ class AuthViewController: BaseViewController {
         let (eWrapView, eTextField) = AuthUIHelper.roundedTextFiled()
         emailTextField = eTextField
         emailTextField.placeholder = "Email"
+        emailTextField.keyboardType = .emailAddress
+        emailTextField.autocorrectionType = .no
         
         let (pWrapView, pTextField) = AuthUIHelper.roundedTextFiled()
         passwordTextFiled = pTextField
         passwordTextFiled.placeholder = "Пароль"
+        passwordTextFiled.isSecureTextEntry = true
         
         eWrapView.snp.makeConstraints { make in
             make.height.equalTo(40)
@@ -165,12 +168,12 @@ class AuthViewController: BaseViewController {
     // MARK: - Actions
     @objc
     private func didTapSignInButton() {
-        print("hello1")
+        presenter?.signIn(email: emailTextField.text ?? "", password: passwordTextFiled.text ?? "")
     }
     
     @objc
     private func didTapRegistrationButton() {
-        print("hello2")
+        presenter?.onSelectRegister()
     }
     
     private func addGestureRecongizerToHideKeyboard() {
