@@ -17,4 +17,13 @@ enum AppError: Error {
     
     case unowned
     
+    var description: String {
+        switch self {
+        case .connectionError: return "Ошибка соединения"
+        case .authErrors(let apiErrors): return apiErrors.first?.description ?? "Ошика входа"
+        case .invalidToken: return "Неправильный токен"
+        case .unowned: return "Неизвестная ошибка"
+        }
+    }
+    
 }

@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Инициализируем БД
         _ = DataManager.shared
         
+        // User for tests:
+        // - email: te1@te1.com
+        // - password: 1234qwer
+        
         return true
     }
 
