@@ -15,14 +15,17 @@ class AppRouter {
     private let window: UIWindow
     
     private let authRouter: AuthRouter
-//    private let mainRouter: MainRouter
+    private let mainRouter: MainRouter
     
     
     init(window: UIWindow) {
         self.window = window
         
         authRouter = AuthRouter(window: window)
+        mainRouter = MainRouter(window: window)
+        
         authRouter.appRouter = self
+        mainRouter.appRouter = self
     }
     
     func showAuthScreen() {
@@ -30,18 +33,7 @@ class AppRouter {
     }
     
     func showMainScreen() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
-        window.rootViewController = vc
-        window.makeKeyAndVisible()
-        
-        UIView.transition(
-            with: window,
-            duration: 0.5,
-            options: [.transitionFlipFromRight],
-            animations: nil,
-            completion: nil
-        )
+        mainRouter.showMainTabBarController()
     }
     
 }
