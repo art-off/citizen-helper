@@ -38,7 +38,7 @@ enum APIError: Error {
         switch self {
         case .emailAlreadyUse: return "Email уже используется"
         case .passwordTooShort: return "Пароль слишком короткий"
-        case .passwordEntirelyNumeric: return "Пароль не содержит чисел"
+        case .passwordEntirelyNumeric: return "Пароль не содержит букв"
         case .invalidEmail: return "Некорректный email"
         case .invalidFullName: return "Некорректные ФИО"
         case .invalidPassword: return "Некорректный пароль"

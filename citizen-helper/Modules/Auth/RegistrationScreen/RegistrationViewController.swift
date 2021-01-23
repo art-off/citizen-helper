@@ -19,6 +19,15 @@ class RegistrationViewController: BaseViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
+    private let closeButton: UIButton = {
+        let button = UIButton()
+        button.contentVerticalAlignment = .fill
+        button.contentHorizontalAlignment = .fill
+        button.setImage(UIImage(systemName: "xmark.circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        button.tintColor = .gray
+        return button
+    }()
     private let titleLabel = AuthUIHelper.titleLabel()
     
     private let textFieldsStackView = AuthUIHelper.textFieldsStackView()
@@ -43,6 +52,7 @@ class RegistrationViewController: BaseViewController {
         setupScrollView()
         
         setupTitleLabel()
+        setupCloseButton()
         setupTextFields()
         setupRegistrationButton()
         
@@ -72,10 +82,21 @@ class RegistrationViewController: BaseViewController {
     private func setupTitleLabel() {
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalToSuperview().offset(20)
+            make.centerX.equalToSuperview()
         }
         titleLabel.text = "Регистрация"
         titleLabel.textColor = .gray
+    }
+    
+    private func setupCloseButton() {
+        contentView.addSubview(closeButton)
+        closeButton.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(20)
+            make.centerY.equalTo(titleLabel)
+            make.size.equalTo(30)
+        }
+        closeButton.addTarget(self, action: #selector(didTapCloseButton), for: .touchUpInside)
     }
     
     private func setupTextFields() {
@@ -165,8 +186,18 @@ class RegistrationViewController: BaseViewController {
     
     // MARK: - Actions
     @objc
+    private func didTapCloseButton() {
+        presenter?.onTapClose()
+    }
+    
+    @objc
     private func didTapRegistrationButton() {
-//        presenter?.onSelectRegister()
+        presenter?.register(surname: surnameTextField.text ?? "",
+                            firstName: firstNameTextField.text ?? "",
+                            middleName: middleNameTextFiled.text ?? "",
+                            address: addressTextField.text ?? "",
+                            email: emailTextField.text ?? "",
+                            password: passwordTextFiled.text ?? "")
     }
     
     private func addGestureRecongizerToHideKeyboard() {
