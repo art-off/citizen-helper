@@ -113,8 +113,8 @@
 			children = (
 				4A38D0EA25B8917E006EE06F /* AppDelegate.swift */,
 				4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */,
-				4A38D15A25BA0246006EE06F /* AppRouter.swift */,
 				4A38D0EE25B8917E006EE06F /* ViewController.swift */,
+				4A38D15A25BA0246006EE06F /* AppRouter.swift */,
 				4A38D10425B974D5006EE06F /* Logic */,
 				4A38D0FF25B96F5A006EE06F /* Model */,
 				4A76462C25BB5A520075541B /* Common */,

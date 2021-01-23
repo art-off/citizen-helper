@@ -9,7 +9,9 @@ import UIKit
 
 class AuthRouter {
     
+    weak var appRouter: AppRouter?
     private let window: UIWindow
+    
     private var authController: UIViewController?
     private var registrationController: UIViewController?
     
@@ -26,6 +28,18 @@ class AuthRouter {
         window.makeKeyAndVisible()
         
         authController = controller
+        
+        UIView.transition(
+            with: window,
+            duration: 0.5,
+            options: [.transitionFlipFromRight],
+            animations: nil,
+            completion: nil
+        )
+    }
+    
+    func showMainScreen() {
+        appRouter?.showMainScreen()
     }
     
 }

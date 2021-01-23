@@ -22,6 +22,7 @@ class AppRouter {
         self.window = window
         
         authRouter = AuthRouter(window: window)
+        authRouter.appRouter = self
     }
     
     func showAuthScreen() {
@@ -30,9 +31,17 @@ class AppRouter {
     
     func showMainScreen() {
         let vc = UIViewController()
-        vc.view.backgroundColor = .gray
+        vc.view.backgroundColor = .red
         window.rootViewController = vc
         window.makeKeyAndVisible()
+        
+        UIView.transition(
+            with: window,
+            duration: 0.5,
+            options: [.transitionFlipFromRight],
+            animations: nil,
+            completion: nil
+        )
     }
     
 }

@@ -9,6 +9,7 @@ import Foundation
 
 protocol AuthPresenterDelegate: AnyObject {
     func showRegistrationScreen()
+    func showMainScreen()
 }
 
 protocol AuthPresenterProtocol {
@@ -34,21 +35,24 @@ extension AuthPresenter: AuthPresenterProtocol {
     
     func signIn(email: String, password: String) {
         controller?.startLoagingAnimation()
-        authService.auth(user: User(fio: "", email: email, address: nil), with: password) { result in
-            switch result {
-            case .success(()):
-                DispatchQueue.main.async {
-                    self.controller?.stopLoagingAnimation()
-                    self.controller?.showAlert(with: User.token ?? "Token")
-                }
-                // TODO: Тут открывать основной модуль приложения
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.controller?.showAlert(with: error.description)
-                    self.controller?.stopLoagingAnimation()
+        authService.auth(
+            user: User(fio: "", email: email, address: nil),
+            with: password,
+            completion: { result in
+                switch result {
+                case .success():
+                    DispatchQueue.main.async {
+                        self.controller?.startLoagingAnimation()
+                        self.delegate?.showMainScreen()
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.controller?.stopLoagingAnimation()
+                        self.controller?.showAlert(with: error.description)
+                    }
                 }
             }
-        }
+        )
     }
     
     func onSelectRegister() {

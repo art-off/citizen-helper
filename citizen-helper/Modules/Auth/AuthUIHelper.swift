@@ -46,11 +46,12 @@ enum AuthUIHelper {
     
 }
 
+// Вью, тап по которой начинает редактирование в textField
 class CustomTextField: UIView {
     
     let textField: UITextField
     
-    init(frame: CGRect, textField: UITextField){
+    init(frame: CGRect, textField: UITextField) {
         self.textField = textField
         super.init(frame: frame)
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTap))

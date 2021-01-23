@@ -9,6 +9,7 @@ import Foundation
 
 protocol RegistrationPresenterDelegate: AnyObject {
     func dismisRegistrationScreen()
+    func showMainScreen()
 }
 
 
@@ -48,6 +49,28 @@ extension RegistrationPresenter: RegistrationPresenterProtocol {
             controller?.showAlert(with: passwordError.description)
             return
         }
+        
+        controller?.startLoagingAnimation()
+        let fio = surname + " " + firstName + (!middleName.isEmpty ? " \(middleName)" : "")
+        let optionalAddress = !address.isEmpty ? address : nil
+        authService.registration(
+            user: User(fio: fio, email: email, address: optionalAddress),
+            with: password,
+            completion: { result in
+                switch result {
+                case .success():
+                    DispatchQueue.main.async {
+                        self.controller?.startLoagingAnimation()
+                        self.delegate?.showMainScreen()
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.controller?.startLoagingAnimation()
+                        self.controller?.showAlert(with: error.description)
+                    }
+                }
+            }
+        )
     }
     
     func onTapClose() {
@@ -62,10 +85,8 @@ private extension RegistrationPresenter {
         let regularExpressionForEmail = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let testEmail = NSPredicate(format: "SELF MATCHES %@", regularExpressionForEmail)
         if testEmail.evaluate(with: email) {
-            print("fine1")
             return nil
         } else {
-            print("fine2")
             return .invalidEmail
         }
      }
