@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         appRouter = AppRouter(window: window!)
         
-        appRouter?.showAuthScreen()
+        // TODO: Сделать .showAuthScreen()
+        appRouter?.showMainScreen()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -290,10 +290,18 @@
 		4A76464025BC86940075541B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4A76464825BCA3EF0075541B /* PersonScreen */,
 				4A76464125BC86AC0075541B /* MainRouter.swift */,
 				4A76464525BC902A0075541B /* MainTabBarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		4A76464825BCA3EF0075541B /* PersonScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PersonScreen;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
