@@ -15,9 +15,13 @@ class MainRouter {
     
     private let tabBarController: UITabBarController
     
-    private let navController1: UINavigationController // поменять название
-    private let navController2: UINavigationController // поменять название
-    private let profileNavController: UINavigationController
+//    private let navController1: UINavigationController // поменять название
+//    private let navController2: UINavigationController // поменять название
+//    private let profileNavController: UINavigationController
+    
+    private var addRequestRouter: AddRequestRouter!
+    private var myRequestsRouter: MyRequestsRouter!
+    private var profileRouter: ProfileRouter!
     
     // MARK: Сделать тут так:
     // - в этом роутере оставить только навбары (и дочерние роутеры)
@@ -28,37 +32,10 @@ class MainRouter {
         self.window = window
         tabBarController = UITabBarController()
         
-        let vc1 = UIViewController()
-        vc1.view.backgroundColor = .yellow
-        let vc2 = UIViewController()
-        vc2.view.backgroundColor = .green
-        let vc3 = UIViewController()
-        vc3.view.backgroundColor = .gray
-        
-        navController1 = UINavigationController(rootViewController: vc1)
-        navController2 = UINavigationController(rootViewController: vc2)
-        profileNavController = UINavigationController(rootViewController: vc3)
-        
-        navController1.tabBarItem = UITabBarItem(
-            title: "Создать",
-            image: UIImage(systemName: "plus"),
-            tag: 0
-        )
-        navController2.tabBarItem = UITabBarItem(
-            title: "Мои заявки",
-            image: UIImage(systemName: "folder.fill"),
-            tag: 1
-        )
-        profileNavController.tabBarItem = UITabBarItem(
-            title: "Профиль",
-            image: UIImage(systemName: "person.fill"),
-            tag: 2
-        )
-        
         tabBarController.viewControllers = [
-            navController1,
-            navController2,
-            profileNavController,
+            startAddRequestsRouter(),
+            startMyRequestsRouter(),
+            startProfileRouter(),
         ]
     }
     
@@ -73,6 +50,49 @@ class MainRouter {
             animations: nil,
             completion: nil
         )
+    }
+    
+    // MARK: - Start Routers
+    private func startAddRequestsRouter() -> UINavigationController {
+        let navController = UINavigationController()
+        navController.tabBarItem = UITabBarItem(
+            title: "Создать",
+            image: UIImage(systemName: "plus"),
+            tag: 0
+        )
+        
+        addRequestRouter = AddRequestRouter(navController: navController)
+        addRequestRouter.start()
+        
+        return addRequestRouter.navController
+    }
+    
+    private func startMyRequestsRouter() -> UINavigationController {
+        let navController = UINavigationController()
+        navController.tabBarItem = UITabBarItem(
+            title: "Мои заявки",
+            image: UIImage(systemName: "folder.fill"),
+            tag: 1
+        )
+        
+        myRequestsRouter = MyRequestsRouter(navController: navController)
+        myRequestsRouter.start()
+        
+        return myRequestsRouter.navController
+    }
+    
+    private func startProfileRouter() -> UINavigationController {
+        let navController = UINavigationController()
+        navController.tabBarItem = UITabBarItem(
+            title: "Профиль",
+            image: UIImage(systemName: "person.fill"),
+            tag: 2
+        )
+        
+        profileRouter = ProfileRouter(navController: navController)
+        profileRouter.start()
+        
+        return profileRouter.navController
     }
     
 }

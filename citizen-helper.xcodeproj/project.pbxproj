@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0E801E25C56A2A00A65B3C /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E801D25C56A2A00A65B3C /* ProfileRouter.swift */; };
+		4A0E802225C56CA500A65B3C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E802125C56CA500A65B3C /* ProfileViewController.swift */; };
+		4A0E802625C56D8D00A65B3C /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E802525C56D8D00A65B3C /* ProfilePresenter.swift */; };
+		4A0E805B25C5878300A65B3C /* ChildRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E805A25C5878300A65B3C /* ChildRouter.swift */; };
+		4A0E806225C58DE400A65B3C /* MyRequestsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806125C58DE400A65B3C /* MyRequestsRouter.swift */; };
+		4A0E806625C58E9700A65B3C /* AddRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806525C58E9700A65B3C /* AddRequestRouter.swift */; };
 		4A38D0EB25B8917E006EE06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EA25B8917E006EE06F /* AppDelegate.swift */; };
 		4A38D0ED25B8917E006EE06F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */; };
 		4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EE25B8917E006EE06F /* ViewController.swift */; };
@@ -38,13 +44,18 @@
 		4A76463525BB69E20075541B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463425BB69E20075541B /* RegistrationViewController.swift */; };
 		4A76463925BB69EE0075541B /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463825BB69EE0075541B /* RegistrationPresenter.swift */; };
 		4A76464225BC86AC0075541B /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76464125BC86AC0075541B /* MainRouter.swift */; };
-		4A76464625BC902B0075541B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76464525BC902A0075541B /* MainTabBarController.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0715E1F44C07D94231FE0297 /* Pods-citizen-helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-citizen-helper.release.xcconfig"; path = "Target Support Files/Pods-citizen-helper/Pods-citizen-helper.release.xcconfig"; sourceTree = "<group>"; };
 		19081DDE5B2EE20AA7937D7C /* Pods-citizen-helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-citizen-helper.debug.xcconfig"; path = "Target Support Files/Pods-citizen-helper/Pods-citizen-helper.debug.xcconfig"; sourceTree = "<group>"; };
+		4A0E801D25C56A2A00A65B3C /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		4A0E802125C56CA500A65B3C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4A0E802525C56D8D00A65B3C /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		4A0E805A25C5878300A65B3C /* ChildRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRouter.swift; sourceTree = "<group>"; };
+		4A0E806125C58DE400A65B3C /* MyRequestsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsRouter.swift; sourceTree = "<group>"; };
+		4A0E806525C58E9700A65B3C /* AddRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestRouter.swift; sourceTree = "<group>"; };
 		4A38D0E725B8917E006EE06F /* citizen-helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "citizen-helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A38D0EA25B8917E006EE06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +89,6 @@
 		4A76463425BB69E20075541B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4A76463825BB69EE0075541B /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		4A76464125BC86AC0075541B /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		4A76464525BC902A0075541B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +104,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A0E801C25C566EB00A65B3C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4A38D13A25B9A32B006EE06F /* CommonResponseObjects */,
+				4A38D14425B9A583006EE06F /* APIError.swift */,
+				4A38D12B25B98DB0006EE06F /* BaseAPI.swift */,
+				4A38D13525B9A079006EE06F /* BaseAPIService.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4A0E802925C56FB500A65B3C /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4A0E802125C56CA500A65B3C /* ProfileViewController.swift */,
+				4A0E802525C56D8D00A65B3C /* ProfilePresenter.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		4A0E805F25C58D6700A65B3C /* MyRequests */ = {
+			isa = PBXGroup;
+			children = (
+				4A0E806125C58DE400A65B3C /* MyRequestsRouter.swift */,
+			);
+			path = MyRequests;
+			sourceTree = "<group>";
+		};
+		4A0E806025C58D7100A65B3C /* AddRequests */ = {
+			isa = PBXGroup;
+			children = (
+				4A0E806525C58E9700A65B3C /* AddRequestRouter.swift */,
+			);
+			path = AddRequests;
+			sourceTree = "<group>";
+		};
 		4A38D0DE25B8917E006EE06F = {
 			isa = PBXGroup;
 			children = (
@@ -197,10 +243,7 @@
 		4A38D12525B98D21006EE06F /* API */ = {
 			isa = PBXGroup;
 			children = (
-				4A38D14425B9A583006EE06F /* APIError.swift */,
-				4A38D13A25B9A32B006EE06F /* CommonResponseObjects */,
-				4A38D12B25B98DB0006EE06F /* BaseAPI.swift */,
-				4A38D13525B9A079006EE06F /* BaseAPIService.swift */,
+				4A0E801C25C566EB00A65B3C /* Common */,
 				4A38D12625B98D4A006EE06F /* AuthAPI */,
 			);
 			path = API;
@@ -290,18 +333,22 @@
 		4A76464025BC86940075541B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4A76464825BCA3EF0075541B /* PersonScreen */,
+				4A0E805A25C5878300A65B3C /* ChildRouter.swift */,
 				4A76464125BC86AC0075541B /* MainRouter.swift */,
-				4A76464525BC902A0075541B /* MainTabBarController.swift */,
+				4A0E806025C58D7100A65B3C /* AddRequests */,
+				4A0E805F25C58D6700A65B3C /* MyRequests */,
+				4A76464825BCA3EF0075541B /* Profile */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		4A76464825BCA3EF0075541B /* PersonScreen */ = {
+		4A76464825BCA3EF0075541B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4A0E801D25C56A2A00A65B3C /* ProfileRouter.swift */,
+				4A0E802925C56FB500A65B3C /* ProfileScreen */,
 			);
-			path = PersonScreen;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -435,11 +482,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A76464625BC902B0075541B /* MainTabBarController.swift in Sources */,
+				4A0E806625C58E9700A65B3C /* AddRequestRouter.swift in Sources */,
 				4A38D10125B96FA3006EE06F /* User.swift in Sources */,
 				4A76464225BC86AC0075541B /* MainRouter.swift in Sources */,
 				4A76463925BB69EE0075541B /* RegistrationPresenter.swift in Sources */,
 				4A38D12025B9818F006EE06F /* Realm+CascadeDeleting.swift in Sources */,
+				4A0E802625C56D8D00A65B3C /* ProfilePresenter.swift in Sources */,
 				4A38D16325BA0FD2006EE06F /* AuthRouter.swift in Sources */,
 				4A38D15B25BA0246006EE06F /* AppRouter.swift in Sources */,
 				4A76463525BB69E20075541B /* RegistrationViewController.swift in Sources */,
@@ -448,9 +496,12 @@
 				4A76462E25BB5A6F0075541B /* BaseViewController.swift in Sources */,
 				4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */,
 				4A38D14525B9A583006EE06F /* APIError.swift in Sources */,
+				4A0E802225C56CA500A65B3C /* ProfileViewController.swift in Sources */,
 				4A38D13625B9A079006EE06F /* BaseAPIService.swift in Sources */,
 				4A38D13C25B9A348006EE06F /* ErrorCodesResponse.swift in Sources */,
 				4A38D10725B9750C006EE06F /* UserDefaultsWrapper.swift in Sources */,
+				4A0E806225C58DE400A65B3C /* MyRequestsRouter.swift in Sources */,
+				4A0E805B25C5878300A65B3C /* ChildRouter.swift in Sources */,
 				4A38D16725BA1386006EE06F /* AuthViewController.swift in Sources */,
 				4A38D13325B99471006EE06F /* AppError.swift in Sources */,
 				4A38D11C25B97EE5006EE06F /* Repository.swift in Sources */,
@@ -459,6 +510,7 @@
 				4A38D12825B98D5B006EE06F /* AuthAPI.swift in Sources */,
 				4A38D16B25BA1405006EE06F /* AuthPresenter.swift in Sources */,
 				4A38D13025B99421006EE06F /* AuthAPIService.swift in Sources */,
+				4A0E801E25C56A2A00A65B3C /* ProfileRouter.swift in Sources */,
 				4A38D11825B97CA4006EE06F /* RUser.swift in Sources */,
 				4A38D0EB25B8917E006EE06F /* AppDelegate.swift in Sources */,
 				4A76462925BB3BE80075541B /* AuthUIHelper.swift in Sources */,
