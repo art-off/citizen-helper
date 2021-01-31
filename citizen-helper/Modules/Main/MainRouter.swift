@@ -15,17 +15,9 @@ class MainRouter {
     
     private let tabBarController: UITabBarController
     
-//    private let navController1: UINavigationController // поменять название
-//    private let navController2: UINavigationController // поменять название
-//    private let profileNavController: UINavigationController
-    
     private var addRequestRouter: AddRequestRouter!
     private var myRequestsRouter: MyRequestsRouter!
     private var profileRouter: ProfileRouter!
-    
-    // MARK: Сделать тут так:
-    // - в этом роутере оставить только навбары (и дочерние роутеры)
-    // - в дочерних роутерах уже и работать с нав барами и ставить туда VC
     
     
     init(window: UIWindow) {
@@ -89,10 +81,18 @@ class MainRouter {
             tag: 2
         )
         
-        profileRouter = ProfileRouter(navController: navController)
+        profileRouter = ProfileRouter(navController: navController, delegate: self)
         profileRouter.start()
         
         return profileRouter.navController
+    }
+    
+}
+
+extension MainRouter: ProfileRouterDelegate {
+    
+    func showAuthScreen() {
+        appRouter?.showAuthScreen()
     }
     
 }

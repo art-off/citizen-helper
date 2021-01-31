@@ -28,6 +28,14 @@ class AppRouter {
         mainRouter.appRouter = self
     }
     
+    func start() {
+//        if AuthService().getCurrUser() != nil {
+            showMainScreen()
+//        } else {
+//            showAuthScreen()
+//        }
+    }
+    
     func showAuthScreen() {
         authRouter.showAuthScreen()
     }

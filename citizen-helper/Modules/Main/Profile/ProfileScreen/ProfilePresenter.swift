@@ -8,22 +8,41 @@
 import Foundation
 
 
+protocol ProfilePresenterDelegate: AnyObject {
+    func showAuthScreen()
+    func showChangePasswordScreen()
+}
+
 protocol ProfilePresenterProtocol {
-    
+    func logOutCurrUser()
+    func changePassword()
 }
 
 
 class ProfilePresenter {
     
     private weak var controller: ProfileViewControllerProtocol?
+    private weak var delegate: ProfilePresenterDelegate?
+    
+    private let authService = AuthService()
     
     
-    init(controller: ProfileViewControllerProtocol) {
+    init(controller: ProfileViewControllerProtocol, delegate: ProfilePresenterDelegate) {
         self.controller = controller
+        self.delegate = delegate
     }
     
 }
 
 extension ProfilePresenter: ProfilePresenterProtocol {
+    
+    func logOutCurrUser() {
+        authService.logOutCurrUser()
+        delegate?.showAuthScreen()
+    }
+    
+    func changePassword() {
+        delegate?.showChangePasswordScreen()
+    }
     
 }

@@ -63,4 +63,8 @@ extension DataManager {
         try? userRepository.insert(item: user.toRealm())
     }
     
+    func deleteCurrUser() {
+        try? userRepository.delete(items: userRepository.getAll())
+    }
+    
 }

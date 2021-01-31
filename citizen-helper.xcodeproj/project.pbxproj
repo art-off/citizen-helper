@@ -13,6 +13,7 @@
 		4A0E805B25C5878300A65B3C /* ChildRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E805A25C5878300A65B3C /* ChildRouter.swift */; };
 		4A0E806225C58DE400A65B3C /* MyRequestsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806125C58DE400A65B3C /* MyRequestsRouter.swift */; };
 		4A0E806625C58E9700A65B3C /* AddRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806525C58E9700A65B3C /* AddRequestRouter.swift */; };
+		4A0E806F25C5DC6000A65B3C /* CommonUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806E25C5DC6000A65B3C /* CommonUIHelper.swift */; };
 		4A38D0EB25B8917E006EE06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EA25B8917E006EE06F /* AppDelegate.swift */; };
 		4A38D0ED25B8917E006EE06F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */; };
 		4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EE25B8917E006EE06F /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		4A0E805A25C5878300A65B3C /* ChildRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRouter.swift; sourceTree = "<group>"; };
 		4A0E806125C58DE400A65B3C /* MyRequestsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsRouter.swift; sourceTree = "<group>"; };
 		4A0E806525C58E9700A65B3C /* AddRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestRouter.swift; sourceTree = "<group>"; };
+		4A0E806E25C5DC6000A65B3C /* CommonUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIHelper.swift; sourceTree = "<group>"; };
 		4A38D0E725B8917E006EE06F /* citizen-helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "citizen-helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A38D0EA25B8917E006EE06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,7 +169,6 @@
 				4A38D15A25BA0246006EE06F /* AppRouter.swift */,
 				4A38D10425B974D5006EE06F /* Logic */,
 				4A38D0FF25B96F5A006EE06F /* Model */,
-				4A76462C25BB5A520075541B /* Common */,
 				4A38D15E25BA03AB006EE06F /* Modules */,
 				4A38D0F025B8917E006EE06F /* Main.storyboard */,
 				4A38D0F325B89182006EE06F /* Assets.xcassets */,
@@ -286,6 +287,7 @@
 		4A38D15E25BA03AB006EE06F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A76462C25BB5A520075541B /* Common */,
 				4A38D16125BA0FB6006EE06F /* Auth */,
 				4A76464025BC86940075541B /* Main */,
 			);
@@ -317,6 +319,7 @@
 			children = (
 				4A76462D25BB5A6F0075541B /* BaseViewController.swift */,
 				4A76463025BB5B440075541B /* AlertView.swift */,
+				4A0E806E25C5DC6000A65B3C /* CommonUIHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */,
 				4A38D12C25B98DB0006EE06F /* BaseAPI.swift in Sources */,
 				4A38D12825B98D5B006EE06F /* AuthAPI.swift in Sources */,
+				4A0E806F25C5DC6000A65B3C /* CommonUIHelper.swift in Sources */,
 				4A38D16B25BA1405006EE06F /* AuthPresenter.swift in Sources */,
 				4A38D13025B99421006EE06F /* AuthAPIService.swift in Sources */,
 				4A0E801E25C56A2A00A65B3C /* ProfileRouter.swift in Sources */,
