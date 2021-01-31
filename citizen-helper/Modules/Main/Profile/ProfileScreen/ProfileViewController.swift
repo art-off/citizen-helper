@@ -130,7 +130,7 @@ class ProfileViewController: BaseViewController {
     
     @objc
     private func didTapChangePasswordButton() {
-        
+        presenter?.changePassword()
     }
     
 }

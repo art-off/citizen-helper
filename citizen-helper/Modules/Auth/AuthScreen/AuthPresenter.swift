@@ -42,7 +42,7 @@ extension AuthPresenter: AuthPresenterProtocol {
                 switch result {
                 case .success():
                     DispatchQueue.main.async {
-                        self.controller?.startLoagingAnimation()
+                        self.controller?.stopLoagingAnimation()
                         self.delegate?.showMainScreen()
                     }
                 case .failure(let error):

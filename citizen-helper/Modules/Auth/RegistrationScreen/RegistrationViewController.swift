@@ -30,7 +30,7 @@ class RegistrationViewController: BaseViewController {
     }()
     private let titleLabel = AuthUIHelper.titleLabel()
     
-    private let textFieldsStackView = AuthUIHelper.textFieldsStackView()
+    private let textFieldsStackView = CommonUIHelper.textFieldsStackView()
     private var surnameTextField: UITextField!
     private var firstNameTextField: UITextField!
     private var middleNameTextFiled: UITextField!
@@ -107,36 +107,36 @@ class RegistrationViewController: BaseViewController {
         }
         textFieldsStackView.backgroundColor = .clear
         
-        let (sWparView, sTextField) = AuthUIHelper.roundedTextFiled()
+        let (sWparView, sTextField) = CommonUIHelper.roundedTextFiled()
         surnameTextField = sTextField
         surnameTextField.placeholder = "Фамилия"
         surnameTextField.keyboardType = .alphabet
         surnameTextField.autocorrectionType = .no
         
-        let (fnWparView, fnTextField) = AuthUIHelper.roundedTextFiled()
+        let (fnWparView, fnTextField) = CommonUIHelper.roundedTextFiled()
         firstNameTextField = fnTextField
         firstNameTextField.placeholder = "Имя"
         firstNameTextField.keyboardType = .alphabet
         firstNameTextField.autocorrectionType = .no
         
-        let (mnWparView, mnTextField) = AuthUIHelper.roundedTextFiled()
+        let (mnWparView, mnTextField) = CommonUIHelper.roundedTextFiled()
         middleNameTextFiled = mnTextField
         middleNameTextFiled.placeholder = "Отчество (не обязательно)"
         middleNameTextFiled.keyboardType = .alphabet
         middleNameTextFiled.autocorrectionType = .no
         
-        let (aWparView, aTextField) = AuthUIHelper.roundedTextFiled()
+        let (aWparView, aTextField) = CommonUIHelper.roundedTextFiled()
         addressTextField = aTextField
         addressTextField.placeholder = "Адрес проживания (не обязательно)"
         addressTextField.autocorrectionType = .no
         
-        let (eWrapView, eTextField) = AuthUIHelper.roundedTextFiled()
+        let (eWrapView, eTextField) = CommonUIHelper.roundedTextFiled()
         emailTextField = eTextField
         emailTextField.placeholder = "Email"
         emailTextField.keyboardType = .emailAddress
         emailTextField.autocorrectionType = .no
         
-        let (pWrapView, pTextField) = AuthUIHelper.roundedTextFiled()
+        let (pWrapView, pTextField) = CommonUIHelper.roundedTextFiled()
         passwordTextFiled = pTextField
         passwordTextFiled.placeholder = "Пароль"
         passwordTextFiled.isSecureTextEntry = true

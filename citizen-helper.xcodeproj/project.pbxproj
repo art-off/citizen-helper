@@ -45,6 +45,8 @@
 		4A76463525BB69E20075541B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463425BB69E20075541B /* RegistrationViewController.swift */; };
 		4A76463925BB69EE0075541B /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76463825BB69EE0075541B /* RegistrationPresenter.swift */; };
 		4A76464225BC86AC0075541B /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A76464125BC86AC0075541B /* MainRouter.swift */; };
+		4AF0967C25C7253E00A300C9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0967A25C7253E00A300C9 /* ChangePasswordViewController.swift */; };
+		4AF0967D25C7253E00A300C9 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0967B25C7253E00A300C9 /* ChangePasswordPresenter.swift */; };
 		6F8036BB5363D6F82A53038E /* Pods_citizen_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		4A76463425BB69E20075541B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4A76463825BB69EE0075541B /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		4A76464125BC86AC0075541B /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		4AF0967A25C7253E00A300C9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		4AF0967B25C7253E00A300C9 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		7C35FCCB42BF1BCA882D2ED1 /* Pods_citizen_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citizen_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -350,8 +354,18 @@
 			children = (
 				4A0E801D25C56A2A00A65B3C /* ProfileRouter.swift */,
 				4A0E802925C56FB500A65B3C /* ProfileScreen */,
+				4AF0967925C7253E00A300C9 /* ChangePasswordScreen */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		4AF0967925C7253E00A300C9 /* ChangePasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4AF0967A25C7253E00A300C9 /* ChangePasswordViewController.swift */,
+				4AF0967B25C7253E00A300C9 /* ChangePasswordPresenter.swift */,
+			);
+			path = ChangePasswordScreen;
 			sourceTree = "<group>";
 		};
 		83A9BE08207F45B59A71F884 /* Frameworks */ = {
@@ -497,6 +511,7 @@
 				4A38D11325B97A62006EE06F /* DataManager.swift in Sources */,
 				4A76463125BB5B440075541B /* AlertView.swift in Sources */,
 				4A76462E25BB5A6F0075541B /* BaseViewController.swift in Sources */,
+				4AF0967D25C7253E00A300C9 /* ChangePasswordPresenter.swift in Sources */,
 				4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */,
 				4A38D14525B9A583006EE06F /* APIError.swift in Sources */,
 				4A0E802225C56CA500A65B3C /* ProfileViewController.swift in Sources */,
@@ -506,6 +521,7 @@
 				4A0E806225C58DE400A65B3C /* MyRequestsRouter.swift in Sources */,
 				4A0E805B25C5878300A65B3C /* ChildRouter.swift in Sources */,
 				4A38D16725BA1386006EE06F /* AuthViewController.swift in Sources */,
+				4AF0967C25C7253E00A300C9 /* ChangePasswordViewController.swift in Sources */,
 				4A38D13325B99471006EE06F /* AppError.swift in Sources */,
 				4A38D11C25B97EE5006EE06F /* Repository.swift in Sources */,
 				4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */,

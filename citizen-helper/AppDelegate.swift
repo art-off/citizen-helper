@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // User for tests:
         // - email: te1@te1.com
-        // - password: 1234qwer
+        // - password: qwerasdf
         
         return true
     }

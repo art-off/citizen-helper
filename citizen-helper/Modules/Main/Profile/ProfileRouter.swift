@@ -34,7 +34,11 @@ class ProfileRouter: ChidlMainRouter {
     }
     
     private func _showChangePasswrodScreen() {
+        let controller = ChangePasswordViewController()
+        let presenter = ChangePasswordPresenter(controller: controller, delegate: self)
+        controller.presenter = presenter
         
+        navController.pushViewController(controller, animated: true)
     }
     
 }
@@ -49,4 +53,11 @@ extension ProfileRouter: ProfilePresenterDelegate {
         _showChangePasswrodScreen()
     }
     
+}
+
+extension ProfileRouter: ChangePasswordPresenterDelegate {
+    
+    func backToProfile() {
+        navController.popViewController(animated: true)
+    }
 }
