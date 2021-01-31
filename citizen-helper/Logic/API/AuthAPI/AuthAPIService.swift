@@ -30,7 +30,6 @@ class AuthAPIService {
     
     // Result будет содержать в себе токен или ошибку
     func auth(user: User, with password: String, completion: @escaping (Result<String, AppError>) -> Void) {
-        print("hello2")
         baseAPIService.load(
             TokenResponse.self,
             request: AuthAPI.auth(user: user, withPassword: password),
