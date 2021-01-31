@@ -29,11 +29,11 @@ class AppRouter {
     }
     
     func start() {
-//        if AuthService().getCurrUser() != nil {
+        if AuthService().getCurrUser() != nil {
             showMainScreen()
-//        } else {
-//            showAuthScreen()
-//        }
+        } else {
+            showAuthScreen()
+        }
     }
     
     func showAuthScreen() {

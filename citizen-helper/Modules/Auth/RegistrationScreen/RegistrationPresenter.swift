@@ -60,12 +60,12 @@ extension RegistrationPresenter: RegistrationPresenterProtocol {
                 switch result {
                 case .success():
                     DispatchQueue.main.async {
-                        self.controller?.startLoagingAnimation()
+                        self.controller?.stopLoagingAnimation()
                         self.delegate?.showMainScreen()
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
-                        self.controller?.startLoagingAnimation()
+                        self.controller?.stopLoagingAnimation()
                         self.controller?.showAlert(with: error.description)
                     }
                 }
