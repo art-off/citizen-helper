@@ -9,7 +9,7 @@ import Foundation
 
 struct BaseAPI {
     
-    static let address = "http://msu.w0rng.ru"
+    static let address = "https://msu.w0rng.ru"
     
     // MARK: - Helper Methods (Request)
     static func request(_ method: HTTPMethod, with url: URL, andJsonData jsonData: Data? = nil) -> URLRequest {

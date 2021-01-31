@@ -17,6 +17,10 @@ class AuthService {
         DataManager.shared.getCurrentUser()
     }
     
+    func logOutCurrUser() {
+        DataManager.shared.deleteCurrUser()
+    }
+    
     // MARK: - Methods from AuthAPIService
     func registration(user: User, with password: String, completion: @escaping (Result<Void, AppError>) -> Void) {
         authApiService.registration(user: user, with: password) { result in

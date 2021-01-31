@@ -10,6 +10,7 @@ import UIKit
 class AuthRouter {
     
     weak var appRouter: AppRouter?
+    
     private let window: UIWindow
     
     private var authController: UIViewController?

@@ -23,7 +23,7 @@ class AuthViewController: BaseViewController {
     private let titleLabel = AuthUIHelper.titleLabel()
     private let emblemImageView = AuthUIHelper.emblemImageView()
     
-    private let textFieldsStackView = AuthUIHelper.textFieldsStackView()
+    private let textFieldsStackView = CommonUIHelper.textFieldsStackView()
     private var emailTextField: UITextField!
     private var passwordTextFiled: UITextField!
     
@@ -100,13 +100,13 @@ class AuthViewController: BaseViewController {
         }
         textFieldsStackView.backgroundColor = .clear
         
-        let (eWrapView, eTextField) = AuthUIHelper.roundedTextFiled()
+        let (eWrapView, eTextField) = CommonUIHelper.roundedTextFiled()
         emailTextField = eTextField
         emailTextField.placeholder = "Email"
         emailTextField.keyboardType = .emailAddress
         emailTextField.autocorrectionType = .no
         
-        let (pWrapView, pTextField) = AuthUIHelper.roundedTextFiled()
+        let (pWrapView, pTextField) = CommonUIHelper.roundedTextFiled()
         passwordTextFiled = pTextField
         passwordTextFiled.placeholder = "Пароль"
         passwordTextFiled.isSecureTextEntry = true
