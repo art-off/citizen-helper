@@ -13,7 +13,7 @@ class MainRouter {
     
     private let window: UIWindow
     
-    private let tabBarController: UITabBarController
+    private var tabBarController: UITabBarController!
     
     private var addRequestRouter: AddRequestRouter!
     private var myRequestsRouter: MyRequestsRouter!
@@ -22,6 +22,9 @@ class MainRouter {
     
     init(window: UIWindow) {
         self.window = window
+    }
+    
+    func showMainTabBarController() {
         tabBarController = UITabBarController()
         
         tabBarController.viewControllers = [
@@ -29,9 +32,6 @@ class MainRouter {
             startMyRequestsRouter(),
             startProfileRouter(),
         ]
-    }
-    
-    func showMainTabBarController() {
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
         

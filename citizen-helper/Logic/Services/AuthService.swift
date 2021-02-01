@@ -19,16 +19,17 @@ class AuthService {
     
     func logOutCurrUser() {
         DataManager.shared.deleteCurrUser()
+        User.token = nil
     }
     
     // MARK: - Methods from AuthAPIService
     func registration(user: User, with password: String, completion: @escaping (Result<Void, AppError>) -> Void) {
         authApiService.registration(user: user, with: password) { result in
             switch result {
-            case .success(let token):
+            case .success(let userResponse):
                 DispatchQueue.main.async {
-                    User.token = token
-                    DataManager.shared.replaceCurrUser(to: user)
+                    User.token = userResponse.token
+                    DataManager.shared.replaceCurrUser(to: userResponse.toDomain())
                     completion(.success(()))
                 }
             case .failure(let error):
@@ -40,10 +41,10 @@ class AuthService {
     func auth(user: User, with password: String, completion: @escaping (Result<Void, AppError>) -> Void) {
         authApiService.auth(user: user, with: password) { result in
             switch result {
-            case .success(let token):
+            case .success(let userResponse):
                 DispatchQueue.main.async {
-                    User.token = token
-                    DataManager.shared.replaceCurrUser(to: user)
+                    User.token = userResponse.token
+                    DataManager.shared.replaceCurrUser(to: userResponse.toDomain())
                     completion(.success(()))
                 }
             case .failure(let error):

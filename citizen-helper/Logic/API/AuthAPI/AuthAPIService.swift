@@ -12,15 +12,14 @@ class AuthAPIService {
     private let baseAPIService = BaseAPIService()
     
     // Result будет содержать в себе токен или ошибку
-    func registration(user: User, with password: String, completion: @escaping (Result<String, AppError>) -> Void) {
-        print("hello1")
+    func registration(user: User, with password: String, completion: @escaping (Result<UserResponse, AppError>) -> Void) {
         baseAPIService.load(
-            TokenResponse.self,
+            UserResponse.self,
             request: AuthAPI.registration(for: user, withPassword: password),
             completion: { result in
                 switch result {
-                case .success(let tokenResponse):
-                    completion(.success(tokenResponse.token))
+                case .success(let userResponse):
+                    completion(.success(userResponse))
                 case .failure(let error):
                     completion(.failure(error))
                 }
@@ -29,15 +28,15 @@ class AuthAPIService {
     }
     
     // Result будет содержать в себе токен или ошибку
-    func auth(user: User, with password: String, completion: @escaping (Result<String, AppError>) -> Void) {
+    func auth(user: User, with password: String, completion: @escaping (Result<UserResponse, AppError>) -> Void) {
         baseAPIService.load(
-            TokenResponse.self,
+            UserResponse.self,
             request: AuthAPI.auth(user: user, withPassword: password),
             completion: { result in
                 print(result)
                 switch result {
-                case .success(let tokenResponse):
-                    completion(.success(tokenResponse.token))
+                case .success(let userResponse):
+                    completion(.success(userResponse))
                 case .failure(let error):
                     completion(.failure(error))
                 }

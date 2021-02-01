@@ -14,6 +14,7 @@
 		4A0E806225C58DE400A65B3C /* MyRequestsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806125C58DE400A65B3C /* MyRequestsRouter.swift */; };
 		4A0E806625C58E9700A65B3C /* AddRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806525C58E9700A65B3C /* AddRequestRouter.swift */; };
 		4A0E806F25C5DC6000A65B3C /* CommonUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E806E25C5DC6000A65B3C /* CommonUIHelper.swift */; };
+		4A2D230B25C7F719000E9044 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D230A25C7F719000E9044 /* UserResponse.swift */; };
 		4A38D0EB25B8917E006EE06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EA25B8917E006EE06F /* AppDelegate.swift */; };
 		4A38D0ED25B8917E006EE06F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */; };
 		4A38D0EF25B8917E006EE06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38D0EE25B8917E006EE06F /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		4A0E806125C58DE400A65B3C /* MyRequestsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsRouter.swift; sourceTree = "<group>"; };
 		4A0E806525C58E9700A65B3C /* AddRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestRouter.swift; sourceTree = "<group>"; };
 		4A0E806E25C5DC6000A65B3C /* CommonUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIHelper.swift; sourceTree = "<group>"; };
+		4A2D230A25C7F719000E9044 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		4A38D0E725B8917E006EE06F /* citizen-helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "citizen-helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A38D0EA25B8917E006EE06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A38D0EC25B8917E006EE06F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				4A38D14025B9A39F006EE06F /* TokenResponse.swift */,
+				4A2D230A25C7F719000E9044 /* UserResponse.swift */,
 			);
 			path = ResponseObjects;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				4A76463125BB5B440075541B /* AlertView.swift in Sources */,
 				4A76462E25BB5A6F0075541B /* BaseViewController.swift in Sources */,
 				4AF0967D25C7253E00A300C9 /* ChangePasswordPresenter.swift in Sources */,
+				4A2D230B25C7F719000E9044 /* UserResponse.swift in Sources */,
 				4A38D15625B9FBE4006EE06F /* AuthService.swift in Sources */,
 				4A38D14525B9A583006EE06F /* APIError.swift in Sources */,
 				4A0E802225C56CA500A65B3C /* ProfileViewController.swift in Sources */,

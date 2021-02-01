@@ -18,6 +18,9 @@ class ProfileViewController: BaseViewController {
     
     var presenter: ProfilePresenterProtocol?
     
+    private let authService = AuthService()
+    
+    private var currUser: User?
     
     // MARK: - UI
     private var nameView: UIView!
@@ -35,6 +38,9 @@ class ProfileViewController: BaseViewController {
     // MARK: - Life Circle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currUser = authService.getCurrUser()
+        
         
         view.backgroundColor = .systemBackground
         navigationItem.title = "Профиль"
@@ -61,7 +67,7 @@ class ProfileViewController: BaseViewController {
             make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
         
-        nameLabel.text = "Рылов Артем Евгеньевич"
+        nameLabel.text = currUser?.fio ?? "Отсутствует"
     }
     
     private func setupEmailView() {
@@ -73,7 +79,7 @@ class ProfileViewController: BaseViewController {
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
         
-        emailLabel.text = "tema2707@icloud.com"
+        emailLabel.text = currUser?.email ?? "Отсутствует"
     }
     
     private func setupAddressView() {
@@ -85,7 +91,7 @@ class ProfileViewController: BaseViewController {
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
         
-        addressLabel.text = "ул. Молокова 14, кв. 332"
+        addressLabel.text = currUser?.address ?? "Отсутствует"
     }
     
     private func setupChangePasswordButton() {
